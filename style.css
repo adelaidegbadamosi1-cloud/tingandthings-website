@@ -58,3 +58,460 @@ ul,ol{padding-left:1.35rem}
   .nav{align-items:flex-start;flex-direction:column}.nav-links{gap:11px}
   .hero{padding-top:65px}table{display:block;overflow-x:auto}
 }
+/* =========================================================
+   TING & THINGS — HOMEPAGE / EARLY ACCESS LANDING PAGE
+   Scoped so legal/support pages keep their existing styling
+   ========================================================= */
+
+body:has(.signup-section) {
+  background: #fbf8f1;
+  color: #17221d;
+}
+
+body:has(.signup-section) > main {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+
+body:has(.signup-section) .site-header {
+  background: rgba(251, 248, 241, 0.96);
+  border-bottom: 1px solid #e6ded2;
+  backdrop-filter: blur(14px);
+}
+
+body:has(.signup-section) .nav {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 28px;
+}
+
+body:has(.signup-section) .brand {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #093b2e;
+}
+
+body:has(.signup-section) .brand span {
+  color: #f2b84b;
+}
+
+body:has(.signup-section) .nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+body:has(.signup-section) .nav-links a {
+  color: #39473f;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+body:has(.signup-section) .nav-links a:hover {
+  color: #093b2e;
+}
+
+
+/* HERO */
+
+body:has(.signup-section) .hero {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(242,184,75,.22), transparent 28%),
+    linear-gradient(135deg, #093b2e 0%, #0f513f 60%, #173f33 100%);
+  color: white;
+  padding: 92px 28px;
+}
+
+body:has(.signup-section) .hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 70px;
+  align-items: center;
+}
+
+body:has(.signup-section) .hero-copy {
+  max-width: 690px;
+}
+
+body:has(.signup-section) .eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .78rem;
+  font-weight: 900;
+  color: #f2b84b;
+  margin-bottom: 18px;
+}
+
+body:has(.signup-section) .hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5.3rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+  margin: 0 0 28px;
+  color: white;
+}
+
+body:has(.signup-section) .hero-text {
+  max-width: 650px;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.65;
+  color: rgba(255,255,255,.84);
+  margin: 0 0 32px;
+}
+
+body:has(.signup-section) .hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+body:has(.signup-section) .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 850;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+body:has(.signup-section) .button:hover {
+  transform: translateY(-2px);
+}
+
+body:has(.signup-section) .button.primary {
+  background: #f2b84b;
+  color: #17221d;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+body:has(.signup-section) .button.secondary {
+  background: rgba(255,255,255,.08);
+  color: white;
+  border: 1px solid rgba(255,255,255,.3);
+}
+
+body:has(.signup-section) .small-note {
+  margin: 20px 0 0;
+  font-size: .9rem;
+  color: rgba(255,255,255,.62);
+}
+
+
+/* MEAL CARD */
+
+body:has(.signup-section) .hero-card {
+  display: flex;
+  justify-content: center;
+}
+
+body:has(.signup-section) .food-card {
+  width: min(100%, 420px);
+  padding: 28px;
+  border-radius: 26px;
+  background: rgba(255,255,255,.97);
+  color: #17221d;
+  box-shadow: 0 30px 80px rgba(0,0,0,.24);
+  transform: rotate(1.5deg);
+}
+
+body:has(.signup-section) .card-label {
+  display: block;
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 800;
+  color: #6b756f;
+  margin-bottom: 18px;
+}
+
+body:has(.signup-section) .meal-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee7dc;
+}
+
+body:has(.signup-section) .meal-row:last-child {
+  border-bottom: none;
+}
+
+body:has(.signup-section) .meal-row > span {
+  font-size: 1.7rem;
+}
+
+body:has(.signup-section) .meal-row strong {
+  display: block;
+  color: #093b2e;
+  margin-bottom: 3px;
+}
+
+body:has(.signup-section) .meal-row small {
+  color: #6c756f;
+}
+
+
+/* GENERIC SECTIONS */
+
+body:has(.signup-section) .section-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 88px 28px;
+}
+
+body:has(.signup-section) .section-inner.narrow {
+  max-width: 850px;
+  text-align: center;
+}
+
+body:has(.signup-section) .section-kicker {
+  font-size: .8rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #a66f0f;
+}
+
+body:has(.signup-section) .problem-section {
+  background: #fff;
+}
+
+body:has(.signup-section) .problem-section h2,
+body:has(.signup-section) .features-section h2,
+body:has(.signup-section) .signup-section h2,
+body:has(.signup-section) .final-cta h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  color: #093b2e;
+}
+
+body:has(.signup-section) .problem-section p,
+body:has(.signup-section) .feature-card p,
+body:has(.signup-section) .signup-copy p,
+body:has(.signup-section) .final-cta p {
+  line-height: 1.7;
+  color: #5f6d65;
+}
+
+
+/* FEATURES */
+
+body:has(.signup-section) .features-section {
+  background: #fbf8f1;
+}
+
+body:has(.signup-section) .section-heading {
+  max-width: 720px;
+  margin-bottom: 45px;
+}
+
+body:has(.signup-section) .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+body:has(.signup-section) .feature-card {
+  background: #fff;
+  border: 1px solid #e8e1d6;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(30,48,39,.05);
+}
+
+body:has(.signup-section) .feature-icon {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+body:has(.signup-section) .feature-card h3 {
+  color: #093b2e;
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+
+/* SIGNUP */
+
+body:has(.signup-section) .signup-section {
+  background: #f2b84b;
+}
+
+body:has(.signup-section) .signup-inner {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+body:has(.signup-section) .signup-section .eyebrow {
+  color: #6f4a00;
+}
+
+body:has(.signup-section) .signup-copy h2 {
+  margin-top: 0;
+}
+
+body:has(.signup-section) .signup-copy > p {
+  color: #4d4028;
+  font-size: 1.08rem;
+}
+
+body:has(.signup-section) .privacy-note {
+  font-size: .82rem !important;
+}
+
+body:has(.signup-section) .privacy-note a {
+  color: #093b2e;
+  font-weight: 800;
+}
+
+body:has(.signup-section) .signup-form-card {
+  background: white;
+  padding: 18px;
+  border-radius: 24px;
+  box-shadow: 0 20px 55px rgba(81,54,0,.15);
+  overflow: hidden;
+}
+
+body:has(.signup-section) .signup-form-card iframe {
+  width: 100%;
+  min-height: 305px;
+  border: 0;
+}
+
+
+/* FINAL CTA */
+
+body:has(.signup-section) .final-cta {
+  background: #fff;
+}
+
+body:has(.signup-section) .final-cta .button.primary {
+  margin-top: 14px;
+}
+
+
+/* FOOTER */
+
+body:has(.signup-section) .site-footer {
+  background: #092d24;
+  color: white;
+  text-align: left;
+  padding: 0;
+}
+
+body:has(.signup-section) .footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 55px 28px 35px;
+}
+
+body:has(.signup-section) .footer-brand strong {
+  font-size: 1.25rem;
+}
+
+body:has(.signup-section) .footer-brand p {
+  color: rgba(255,255,255,.65);
+}
+
+body:has(.signup-section) .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 28px 0;
+}
+
+body:has(.signup-section) .footer-links a {
+  color: rgba(255,255,255,.82);
+  text-decoration: none;
+}
+
+body:has(.signup-section) .footer-links a:hover {
+  color: #f2b84b;
+}
+
+body:has(.signup-section) .copyright {
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.45);
+  font-size: .84rem;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  body:has(.signup-section) .hero-inner,
+  body:has(.signup-section) .signup-inner {
+    grid-template-columns: 1fr;
+  }
+
+  body:has(.signup-section) .hero {
+    padding: 70px 22px;
+  }
+
+  body:has(.signup-section) .hero-card {
+    margin-top: 15px;
+  }
+
+  body:has(.signup-section) .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  body:has(.signup-section) .nav {
+    padding: 15px 18px;
+  }
+
+  body:has(.signup-section) .nav-links {
+    gap: 12px;
+    font-size: .82rem;
+  }
+
+  body:has(.signup-section) .nav-links a:nth-child(2),
+  body:has(.signup-section) .nav-links a:nth-child(3) {
+    display: none;
+  }
+
+  body:has(.signup-section) .hero {
+    padding: 58px 20px;
+  }
+
+  body:has(.signup-section) .hero h1 {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  body:has(.signup-section) .hero-actions {
+    flex-direction: column;
+  }
+
+  body:has(.signup-section) .button {
+    width: 100%;
+  }
+
+  body:has(.signup-section) .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body:has(.signup-section) .section-inner {
+    padding: 65px 20px;
+  }
+
+  body:has(.signup-section) .food-card {
+    transform: none;
+  }
+
+}
